@@ -1,0 +1,72 @@
+import { 
+  Server, 
+  Cloud, 
+  ShieldAlert, 
+  Mail, 
+  Globe, 
+  Smartphone, 
+  Database,
+  ShieldCheck,
+  Lock,
+  CloudUpload,
+  Cpu
+} from "lucide-react";
+
+export const services = [
+  {
+    id: "it-services",
+    title: "IT Services",
+    icon: Server,
+    description: "Comprehensive IT infrastructure and managed support for modern businesses.",
+    features: ["Managed IT Support", "IT Infrastructure Setup", "Server Setup & Management"],
+    color: "from-blue-500 to-cyan-500",
+  },
+  {
+    id: "cloud-services",
+    title: "Cloud Services",
+    icon: Cloud,
+    description: "Scale your business with our cutting-edge cloud deployment and migration services.",
+    features: ["Cloud Deployment & Hosting", "Cloud Migration", "Backup & Disaster Recovery"],
+    color: "from-cyan-500 to-teal-500",
+  },
+  {
+    id: "cybersecurity",
+    title: "Cybersecurity",
+    icon: ShieldAlert,
+    description: "Enterprise-grade protection for your digital assets and infrastructure.",
+    features: ["Website Security", "Server Hardening", "Vulnerability Assessment", "Firewall & Network Security"],
+    color: "from-red-500 to-purple-500",
+  },
+  {
+    id: "email-services",
+    title: "Email Services",
+    icon: Mail,
+    description: "Professional and secure email solutions for seamless business communication.",
+    features: ["Business Email Setup", "Email Migration", "Email Security"],
+    color: "from-purple-500 to-pink-500",
+  },
+  {
+    id: "website-development",
+    title: "Website Development",
+    icon: Globe,
+    description: "Stunning, high-performance websites and web applications tailored to your needs.",
+    features: ["Business Website Development", "Web Application Development"],
+    color: "from-blue-600 to-indigo-600",
+  },
+  {
+    id: "app-development",
+    title: "App Development",
+    icon: Smartphone,
+    description: "Modern mobile applications with a focus on UI/UX and performance.",
+    features: ["Mobile App UI Design", "App Development"],
+    color: "from-indigo-600 to-purple-600",
+  },
+  {
+    id: "migration-services",
+    title: "Migration Services",
+    icon: Database,
+    description: "Seamless and secure migration of websites, servers, and databases.",
+    features: ["Website Migration", "Server Migration", "Database Migration"],
+    color: "from-green-500 to-teal-500",
+  },
+];

@@ -1,26 +1,92 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary-dark: #0F172A;
+  --color-primary-bg: #FFFFFF;
+  --color-secondary-bg: #F8FAFC;
+  
+  --color-accent-blue: #2563EB;
+  --color-accent-orange: #F97316;
+  --color-accent-gray: #64748B;
+
+  --color-foreground: #0F172A;
+  --color-background: #FFFFFF;
+  --color-card: #FFFFFF;
+  --color-muted: #64748B;
+  --color-border: #E2E8F0;
+  --color-input: #FFFFFF;
+  --color-ring: #2563EB;
+
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-space-grotesk);
+  --font-accent: var(--font-poppins);
+
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-subtle-float: subtleFloat 4s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes subtleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FFFFFF;
+  --foreground: #0F172A;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    @apply font-sans antialiased selection:bg-accent-blue/10 selection:text-accent-blue;
+    overflow-x: hidden;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .glass-card {
+    @apply bg-white border border-border shadow-sm rounded-2xl;
+  }
+  
+  .glass-morphism {
+    @apply bg-white/80 backdrop-blur-md border border-border;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-dark to-accent-blue;
+  }
+
+  .btn-primary {
+    @apply relative px-8 py-3 rounded-lg bg-accent-blue text-white font-semibold transition-all hover:bg-accent-blue/90 active:scale-95 shadow-sm hover:shadow-md;
+  }
+
+  .btn-secondary {
+    @apply relative px-8 py-3 rounded-lg bg-white text-primary-dark border border-border font-semibold transition-all hover:bg-secondary-bg active:scale-95 shadow-sm;
+  }
+
+  .section-padding {
+    @apply py-24 md:py-32;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-secondary-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-border rounded-full hover:bg-muted/30 transition-colors;
 }

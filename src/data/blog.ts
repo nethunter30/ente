@@ -1,0 +1,32 @@
+export const blogPosts = [
+  {
+    slug: "cloud-security-best-practices-2026",
+    title: "Cloud Security Best Practices for 2026",
+    category: "Security",
+    excerpt: "Learn the latest strategies to secure your cloud infrastructure against modern threats.",
+    date: "May 15, 2026",
+    author: "Enteropia Security Team",
+    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1000&auto=format&fit=crop",
+    readTime: "5 min read",
+  },
+  {
+    slug: "optimizing-server-performance-nextjs",
+    title: "Optimizing Server Performance for Next.js",
+    category: "Development",
+    excerpt: "How to leverage edge computing and caching to make your web applications lightning fast.",
+    date: "May 10, 2026",
+    author: "DevOps Specialist",
+    image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=1000&auto=format&fit=crop",
+    readTime: "4 min read",
+  },
+  {
+    slug: "the-future-of-managed-it-services",
+    title: "The Future of Managed IT Services",
+    category: "IT Support",
+    excerpt: "Exploring how AI and automation are reshaping the landscape of IT support and infrastructure.",
+    date: "May 5, 2026",
+    author: "Infrastructure Lead",
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1000&auto=format&fit=crop",
+    readTime: "6 min read",
+  },
+];
