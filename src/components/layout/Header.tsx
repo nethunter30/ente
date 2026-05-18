@@ -41,9 +41,7 @@ export const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-lg bg-accent-blue/20 backdrop-blur-md border border-accent-blue/30 flex items-center justify-center transition-transform group-hover:scale-105">
-              <Shield className="text-white w-6 h-6" />
-            </div>
+            <img src="/logo.png" alt="Logo" className="w-10 h-10" />
             <span className="text-2xl font-heading font-bold tracking-tight text-white drop-shadow-md">
               ENTERO<span className="text-accent-blue">PIA</span>
             </span>

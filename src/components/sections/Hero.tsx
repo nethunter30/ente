@@ -14,7 +14,7 @@ export const Hero = () => {
       if (!video) return;
 
       // Sample HLS stream (Big Buck Bunny)
-      const videoSrc = "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8";
+      const videoSrc = "/back-video.mp4";
 
       if (video.canPlayType("application/vnd.apple.mpegurl")) {
         // Safari natively supports HLS

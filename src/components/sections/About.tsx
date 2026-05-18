@@ -96,56 +96,13 @@ export const About = () => {
                 </Link>
               </motion.div>
               
-              <div className="flex -space-x-3 items-center">
-                 {[1,2,3,4].map(i => (
-                   <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-gray-200" />
-                 ))}
-                 <div className="pl-6 text-xs font-bold text-gray-400 uppercase tracking-widest">
-                   Trusted by 200+ Enterprises
-                 </div>
-              </div>
+              
             </div>
           </motion.div>
 
-          {/* Right Side: Structured Data & Visuals */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            {/* Professional Grid of Stats */}
-            <div className="grid grid-cols-2 gap-4 relative z-10">
-               {stats.map((stat, idx) => (
-                 <motion.div
-                   key={idx}
-                   initial={{ opacity: 0, y: 20 }}
-                   whileInView={{ opacity: 1, y: 0 }}
-                   viewport={{ once: true }}
-                   transition={{ delay: idx * 0.1 }}
-                   className="p-8 rounded-[2rem] bg-white border border-border shadow-sm hover:shadow-2xl hover:border-accent-blue/20 transition-all group overflow-hidden relative"
-                 >
-                   <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
-                     <Users className="w-12 h-12" />
-                   </div>
-                   <div className="text-4xl font-heading font-black text-primary-dark group-hover:text-accent-blue transition-colors">
-                     {stat.value}
-                   </div>
-                   <div className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mt-2">
-                     {stat.label}
-                   </div>
-                 </motion.div>
-               ))}
-            </div>
-
-            {/* Background elements for depth */}
-            <div className="absolute inset-0 -z-10 bg-accent-blue/[0.02] rounded-full blur-[100px] scale-150" />
-            <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent-blue/5 rounded-full blur-3xl animate-pulse" />
-          </motion.div>
-
-        </div>
-      </div>
-    </section>
+         </div>
+         </div>
+         </section>
   );
 };
 
